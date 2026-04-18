@@ -1,5 +1,6 @@
-import { Github, Linkedin, Mail, Download, ArrowDown } from "lucide-react";
-import { TypingText } from "./TypingText";
+import { Mail, Download, ArrowDown } from "lucide-react";
+import { TypingText } from "../TypingText";
+import { GithubIcon, LinkedinIcon } from "../SocialIcons";
 import profileImg from "@/assets/profile.jpg";
 
 export function Hero() {
