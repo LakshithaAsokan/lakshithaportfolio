@@ -1,54 +1,30 @@
 import { Reveal } from "../Reveal";
-import { Code, Globe, Database, BarChart3, MessageSquare } from "lucide-react";
+import { Code, Globe, Database, BarChart3 } from "lucide-react";
 
 const categories = [
   {
     icon: Code,
     title: "Programming",
     color: "from-neon-purple to-neon-blue",
-    skills: [
-      { name: "Java", level: 80 },
-      { name: "Python", level: 85 },
-    ],
+    skills: ["Java", "Python"],
   },
   {
     icon: Globe,
     title: "Web Development",
     color: "from-neon-blue to-neon-cyan",
-    skills: [
-      { name: "HTML", level: 95 },
-      { name: "CSS", level: 90 },
-      { name: "JavaScript", level: 80 },
-    ],
+    skills: ["HTML", "CSS", "JavaScript"],
   },
   {
     icon: Database,
     title: "Database",
     color: "from-neon-cyan to-neon-purple",
-    skills: [
-      { name: "DBMS", level: 80 },
-      { name: "MySQL", level: 85 },
-    ],
+    skills: ["DBMS", "MySQL"],
   },
   {
     icon: BarChart3,
     title: "Data Analytics",
     color: "from-neon-magenta to-neon-purple",
-    skills: [
-      { name: "MS Excel", level: 90 },
-      { name: "Tableau", level: 80 },
-      { name: "Power BI", level: 85 },
-      { name: "Data Visualization", level: 85 },
-    ],
-  },
-  {
-    icon: MessageSquare,
-    title: "Soft Skills",
-    color: "from-neon-purple to-neon-magenta",
-    skills: [
-      { name: "Problem Solving", level: 90 },
-      { name: "Public Speaking", level: 85 },
-    ],
+    skills: ["MS Excel", "Tableau", "Power BI", "Data Visualization"],
   },
 ];
 
@@ -65,7 +41,7 @@ export function Skills() {
           </div>
         </Reveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           {categories.map(({ icon: Icon, title, color, skills }, i) => (
             <Reveal key={title} delay={i * 80}>
               <div className="glass rounded-2xl p-6 hover-glow h-full">
@@ -75,20 +51,14 @@ export function Skills() {
                   </div>
                   <h3 className="font-display text-lg font-bold">{title}</h3>
                 </div>
-                <div className="space-y-4">
-                  {skills.map((s) => (
-                    <div key={s.name}>
-                      <div className="flex justify-between text-sm mb-1.5">
-                        <span className="font-medium">{s.name}</span>
-                        <span className="text-muted-foreground">{s.level}%</span>
-                      </div>
-                      <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-gradient-primary rounded-full transition-all duration-1000 ease-out"
-                          style={{ width: `${s.level}%` }}
-                        />
-                      </div>
-                    </div>
+                <div className="flex flex-wrap gap-2">
+                  {skills.map((name) => (
+                    <span
+                      key={name}
+                      className="glass rounded-full px-4 py-1.5 text-sm font-medium text-foreground/90 border border-white/10 hover:border-neon-cyan/50 hover:text-neon-cyan hover:shadow-[0_0_15px_oklch(0.85_0.18_200/0.4)] transition-all duration-300 cursor-default"
+                    >
+                      {name}
+                    </span>
                   ))}
                 </div>
               </div>
