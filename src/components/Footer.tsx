@@ -1,5 +1,5 @@
 import { Mail, ArrowUp } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "../SocialIcons";
+import { GithubIcon, LinkedinIcon } from "@/components/SocialIcons";
 
 export function Footer() {
   return (
