@@ -59,8 +59,8 @@ export function Hero() {
 
           <div className="flex gap-4 justify-center md:justify-start">
             {[
-              { icon: Github, href: "https://github.com/LakshithaAsokan", label: "GitHub" },
-              { icon: Linkedin, href: "https://linkedin.com/in/lakshitha-asokan31", label: "LinkedIn" },
+              { icon: GithubIcon, href: "https://github.com/LakshithaAsokan", label: "GitHub" },
+              { icon: LinkedinIcon, href: "https://linkedin.com/in/lakshitha-asokan31", label: "LinkedIn" },
               { icon: Mail, href: "mailto:lakshithaasokan@gmail.com", label: "Email" },
             ].map(({ icon: Icon, href, label }) => (
               <a
